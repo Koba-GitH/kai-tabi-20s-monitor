@@ -1,0 +1,8 @@
+apps:
+  hoshino_scraper:
+    enabled: true
+    interval_minutes: 10
+  # 将来追加する監視アプリ
+  # another_monitor:
+  #   enabled: false
+  #   interval_minutes: 10

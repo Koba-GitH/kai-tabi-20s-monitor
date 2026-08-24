@@ -1,0 +1,19 @@
+.env
+.venv/
+.claude/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+logs/
+*.log
+state/*.tmp
+
+# 通知監視とは別用途のローカル自動操作・調査データ
+run_cart_clicker.py
+src/hoshino_scraper/auto_cart_clicker.py
+docs/hoshino_kaitabi/booking_page.html
+
+# 個人用途のローカル専用ファイル（公開リポジトリへ含めない）
+run_cart_clicker.py
+src/hoshino_scraper/auto_cart_clicker.py
+docs/hoshino_kaitabi/booking_page.html
