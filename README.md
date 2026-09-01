@@ -44,7 +44,7 @@ Copy-Item .env.example .env
 
 ## GitHub Actions
 
-`.github/workflows/monitor.yml` は毎時7分から10分間隔で実行します。毎時0分付近の混雑を避けるため、開始分をずらしています。手動実行にも対応しています。
+`.github/workflows/monitor.yml` は毎時2分から5分間隔で実行します。毎時0分付近の混雑を避けるため、開始分をずらしています。手動実行にも対応しています。
 
 GitHubへ公開する前に、リポジトリの `Settings > Secrets and variables > Actions` で以下のRepository secretを登録します。
 
