@@ -84,4 +84,4 @@ cron-job.org側のジョブ設定:
 - `config/url.yaml`: 施設名と予約プランURL
 - `switch.yaml`: ローカル常時監視の有効化と間隔
 
-現在の `target_facilities` は `all` で、`config/url.yaml` に登録された全20施設を確認します。
+現在の監視対象は界 津軽のみで、検索期間は2026年12月1日〜31日です。

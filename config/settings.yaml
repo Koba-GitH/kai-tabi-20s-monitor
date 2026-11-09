@@ -1,7 +1,7 @@
 hoshino:
   # 対象施設 (url.yamlのname指定、"all"で全施設)
   target_facilities:
-    - all
+    - 津軽
     # 北海道・東北
     # - ポロト       # 北海道白老町
     # - 津軽         # 青森県大鰐町
@@ -46,5 +46,6 @@ hoshino:
     #   - start: "2026-02-01"
     #     end: "2026-02-28"
 
-    # 方式3: 今日から○ヶ月 (デフォルト)
-    months_from_today: 2
+    ranges:
+      - start: "2026-12-01"
+        end: "2026-12-31"
