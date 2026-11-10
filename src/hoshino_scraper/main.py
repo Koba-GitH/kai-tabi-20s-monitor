@@ -81,12 +81,12 @@ def run(
 
     settings = settings or load_settings()
     search_period = settings.get("search_period", {})
+    facility_search_periods = settings.get("facility_search_periods", {})
     target_facilities = _resolve_target_facilities(settings)
     if not target_facilities:
         print("  [Error] No target facilities configured.")
         return False
 
-    months = search_period.get("months_from_today", 2)
     state_store = state_store or AvailabilityStateStore()
     try:
         previous_state = state_store.load()
@@ -118,6 +118,8 @@ def run(
                 continue
 
             print(f"  Checking: {facility_name}...")
+            facility_period = facility_search_periods.get(facility_name, search_period)
+            months = facility_period.get("months_from_today", 2)
             try:
                 all_dates = scraper.get_available_dates(url, months)
             except Exception as error:
@@ -130,7 +132,7 @@ def run(
                 [
                     date
                     for date in all_dates
-                    if is_date_in_period(date["date"], search_period, now=started_at)
+                    if is_date_in_period(date["date"], facility_period, now=started_at)
                 ]
             )
 
