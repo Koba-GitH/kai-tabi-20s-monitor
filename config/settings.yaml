@@ -50,6 +50,10 @@ hoshino:
 
   # 施設ごとに指定した検索期間は共通のsearch_periodに優先する
   facility_search_periods:
+    箱根:
+      dates:
+        - "2026-11-23"
+        - "2026-12-24"
     津軽:
       ranges:
         - start: "2026-12-01"
